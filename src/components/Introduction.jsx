@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 const Introduction = () => {
   return (
-    <div className={styles.body} style={{ paddingTop: "48px" }}>
+    <div className={styles.body_first}>
       <span className={styles.title}>Introduction</span>
       <div className={styles.content}>
         <p>

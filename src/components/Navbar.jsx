@@ -2,9 +2,17 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { NavLink } from "react-router-dom";
 import "../App.css";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () => {
   const [activeNavLink, setActiveNavLink] = useState("Introduction");
+
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const handleMenuIconClick = () => {
+    setShowNavbar(!showNavbar);
+  };
 
   const handleNavLinkClick = (navLink) => {
     setActiveNavLink(navLink);
@@ -13,85 +21,93 @@ const Navbar = () => {
         top: 0,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "What_you_should_already_know") {
+    } else if (navLink === "What_you_should_already_know") {
       window.scrollTo({
         top: 475,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "JavaScript_and_Java") {
+    } else if (navLink === "JavaScript_and_Java") {
       window.scrollTo({
         top: 730,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "Hello_world") {
+    } else if (navLink === "Hello_world") {
       window.scrollTo({
         top: 1170,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "Variables") {
+    } else if (navLink === "Variables") {
       window.scrollTo({
         top: 1440,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "Declaring_variables") {
+    } else if (navLink === "Declaring_variables") {
       window.scrollTo({
         top: 1710,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "Variable_scope") {
+    } else if (navLink === "Variable_scope") {
       window.scrollTo({
         top: 2340,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "Global_variables") {
+    } else if (navLink === "Global_variables") {
       window.scrollTo({
         top: 2820,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "Constants") {
+    } else if (navLink === "Constants") {
       window.scrollTo({
         top: 3070,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "Data_types") {
+    } else if (navLink === "Data_types") {
       window.scrollTo({
         top: 3740,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "if...else_statement") {
+    } else if (navLink === "if...else_statement") {
       window.scrollTo({
         top: 4350,
         behavior: "smooth",
       });
-    }
-    else  if (navLink === "while_statement") {
+    } else if (navLink === "while_statement") {
       window.scrollTo({
         top: 5420,
         behavior: "smooth",
       });
-    }
-    else{
+    } else {
       window.scrollTo({
         top: 7000,
         behavior: "smooth",
       });
     }
+    setShowNavbar(!showNavbar);
   };
 
   return (
     <>
-      <ul className={styles.navbar}>
-        <span className={styles.navbar_content}>JS Documentation</span>
+      <div
+        className={`${styles.gradient} ${showNavbar ? styles.display : ""}`}
+        onClick={handleMenuIconClick}
+      ></div>
+      <div className={styles.banner}>
+        <div className={styles.menu_icon}>
+          <MenuIcon onClick={handleMenuIconClick} />
+        </div>
+        <span>JS Documentation</span>
+      </div>
+
+      <ul className={`${styles.navbar} ${showNavbar ? styles.show : ""}`}>
+        <span className={styles.navbar_content}>
+          JS Documentation
+          <div className={styles.close_icon}>
+            <CloseIcon
+              style={{ fontSize: "2rem" }}
+              onClick={handleMenuIconClick}
+            />
+          </div>
+        </span>
         <NavLink
           className={`${styles.navbar_content} ${
             activeNavLink === "Introduction" ? `${styles.active}` : ""
