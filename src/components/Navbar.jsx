@@ -1,11 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { NavLink } from "react-router-dom";
 import "../App.css";
 
 const Navbar = () => {
   const [activeNavLink, setActiveNavLink] = useState("Introduction");
-  // const rootRef = useRef(null);
 
   const handleNavLinkClick = (navLink) => {
     setActiveNavLink(navLink);
@@ -14,14 +13,78 @@ const Navbar = () => {
         top: 0,
         behavior: "smooth",
       });
-      // rootRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     else  if (navLink === "What_you_should_already_know") {
       window.scrollTo({
-        top: 1000,
+        top: 475,
         behavior: "smooth",
       });
-      // rootRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    else  if (navLink === "JavaScript_and_Java") {
+      window.scrollTo({
+        top: 730,
+        behavior: "smooth",
+      });
+    }
+    else  if (navLink === "Hello_world") {
+      window.scrollTo({
+        top: 1170,
+        behavior: "smooth",
+      });
+    }
+    else  if (navLink === "Variables") {
+      window.scrollTo({
+        top: 1440,
+        behavior: "smooth",
+      });
+    }
+    else  if (navLink === "Declaring_variables") {
+      window.scrollTo({
+        top: 1710,
+        behavior: "smooth",
+      });
+    }
+    else  if (navLink === "Variable_scope") {
+      window.scrollTo({
+        top: 2340,
+        behavior: "smooth",
+      });
+    }
+    else  if (navLink === "Global_variables") {
+      window.scrollTo({
+        top: 2820,
+        behavior: "smooth",
+      });
+    }
+    else  if (navLink === "Constants") {
+      window.scrollTo({
+        top: 3070,
+        behavior: "smooth",
+      });
+    }
+    else  if (navLink === "Data_types") {
+      window.scrollTo({
+        top: 3740,
+        behavior: "smooth",
+      });
+    }
+    else  if (navLink === "if...else_statement") {
+      window.scrollTo({
+        top: 4350,
+        behavior: "smooth",
+      });
+    }
+    else  if (navLink === "while_statement") {
+      window.scrollTo({
+        top: 5420,
+        behavior: "smooth",
+      });
+    }
+    else{
+      window.scrollTo({
+        top: 7000,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -44,7 +107,7 @@ const Navbar = () => {
               ? `${styles.active}`
               : ""
           }`}
-          to="What_you_should_already_know"
+          to="/what_you_should_already_know"
           onClick={() => handleNavLinkClick("What_you_should_already_know")}
         >
           What you should already know
@@ -53,7 +116,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "JavaScript_and_Java" ? `${styles.active}` : ""
           }`}
-          to="JavaScript_and_Java"
+          to="/javaScript_and_Java"
           onClick={() => handleNavLinkClick("JavaScript_and_Java")}
         >
           JavaScript and Java
@@ -62,7 +125,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "Hello_world" ? `${styles.active}` : ""
           }`}
-          to="Hello_world"
+          to="/hello_world"
           onClick={() => handleNavLinkClick("Hello_world")}
         >
           Hello world
@@ -71,7 +134,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "Variables" ? `${styles.active}` : ""
           }`}
-          to="Variables"
+          to="/variables"
           onClick={() => handleNavLinkClick("Variables")}
         >
           Variables
@@ -80,7 +143,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "Declaring_variables" ? `${styles.active}` : ""
           }`}
-          to="Declaring_variables"
+          to="/declaring_variables"
           onClick={() => handleNavLinkClick("Declaring_variables")}
         >
           Declaring variables
@@ -89,7 +152,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "Variable_scope" ? `${styles.active}` : ""
           }`}
-          to="Variable_scope"
+          to="/variable_scope"
           onClick={() => handleNavLinkClick("Variable_scope")}
         >
           Variable scope
@@ -98,7 +161,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "Global_variables" ? `${styles.active}` : ""
           }`}
-          to="Global_variables"
+          to="/global_variables"
           onClick={() => handleNavLinkClick("Global_variables")}
         >
           Global variables
@@ -107,7 +170,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "Constants" ? `${styles.active}` : ""
           }`}
-          to="Constants"
+          to="/constants"
           onClick={() => handleNavLinkClick("Constants")}
         >
           Constants
@@ -116,7 +179,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "Data_types" ? `${styles.active}` : ""
           }`}
-          to="Data_types"
+          to="/data_types"
           onClick={() => handleNavLinkClick("Data_types")}
         >
           Data types
@@ -125,7 +188,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "if...else_statement" ? `${styles.active}` : ""
           }`}
-          to="if...else_statement"
+          to="/if...else_statement"
           onClick={() => handleNavLinkClick("if...else_statement")}
         >
           if...else statement
@@ -134,7 +197,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "while_statement" ? `${styles.active}` : ""
           }`}
-          to="while_statement"
+          to="/while_statement"
           onClick={() => handleNavLinkClick("while_statement")}
         >
           while statement
@@ -143,7 +206,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "Function_declarations" ? `${styles.active}` : ""
           }`}
-          to="Function_declarations"
+          to="/function_declarations"
           onClick={() => handleNavLinkClick("Function_declarations")}
         >
           Function declarations
@@ -152,7 +215,7 @@ const Navbar = () => {
           className={`${styles.navbar_content} ${
             activeNavLink === "Reference" ? `${styles.active}` : ""
           }`}
-          to="Introduction"
+          to="/reference"
           onClick={() => handleNavLinkClick("Reference")}
         >
           Reference

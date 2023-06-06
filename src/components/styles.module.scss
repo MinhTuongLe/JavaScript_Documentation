@@ -34,7 +34,6 @@
       }
     }
   }
-  
 }
 
 .active {
@@ -43,17 +42,52 @@
 }
 
 // INTRODUCTION
-.introduction {
+.body {
   // background-color: red;
   width: calc(100% - 350px);
   position: relative;
   left: 350px;
-  height: 100vh;
-  padding: 48px 52px;
+  height: 100%;
+  padding: 0 56px;
 }
 
 .title {
   font-size: 2rem;
   font-weight: 600;
+  padding-top: 48px;
+}
 
+.content {
+  margin: 18px 18px 32px;
+  font-size: 1.2rem;
+  color: #525656;
+  // background-color: red;
+  & p,
+  li {
+    margin-bottom: 16px;
+    line-height: 1.8rem;
+    text-align: justify;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  & ul {
+    padding-left: 56px;
+  }
+  & .code_block {
+    background-color: #f7f7f7;
+    margin: 14px 18px;
+    padding: 20px 16px;
+    border-radius: 5px;
+
+    & code {
+      letter-spacing: 1px;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.6rem;
+      font-family: "Courier New", monospace;
+      display: block;
+      color: #757c7c;
+    }
+  }
 }
