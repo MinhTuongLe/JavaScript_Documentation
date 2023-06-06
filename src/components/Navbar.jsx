@@ -16,80 +16,29 @@ const Navbar = () => {
 
   const handleNavLinkClick = (navLink) => {
     setActiveNavLink(navLink);
-    if (navLink === "Introduction") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    } else if (navLink === "What_you_should_already_know") {
-      window.scrollTo({
-        top: 475,
-        behavior: "smooth",
-      });
-    } else if (navLink === "JavaScript_and_Java") {
-      window.scrollTo({
-        top: 730,
-        behavior: "smooth",
-      });
-    } else if (navLink === "Hello_world") {
-      window.scrollTo({
-        top: 1170,
-        behavior: "smooth",
-      });
-    } else if (navLink === "Variables") {
-      window.scrollTo({
-        top: 1440,
-        behavior: "smooth",
-      });
-    } else if (navLink === "Declaring_variables") {
-      window.scrollTo({
-        top: 1710,
-        behavior: "smooth",
-      });
-    } else if (navLink === "Variable_scope") {
-      window.scrollTo({
-        top: 2340,
-        behavior: "smooth",
-      });
-    } else if (navLink === "Global_variables") {
-      window.scrollTo({
-        top: 2820,
-        behavior: "smooth",
-      });
-    } else if (navLink === "Constants") {
-      window.scrollTo({
-        top: 3070,
-        behavior: "smooth",
-      });
-    } else if (navLink === "Data_types") {
-      window.scrollTo({
-        top: 3740,
-        behavior: "smooth",
-      });
-    } else if (navLink === "if...else_statement") {
-      window.scrollTo({
-        top: 4350,
-        behavior: "smooth",
-      });
-    } else if (navLink === "while_statement") {
-      window.scrollTo({
-        top: 5420,
-        behavior: "smooth",
-      });
-    } else {
-      window.scrollTo({
-        top: 7000,
-        behavior: "smooth",
-      });
-    }
-    setShowNavbar(!showNavbar);
+    setShowNavbar(false);
+
+    setTimeout(() => {
+      const element = document.getElementById(navLink);
+      const deviceWidth = window.innerWidth;
+      let temp = element.offsetTop;
+      if (deviceWidth <= 1023) {
+        temp -= 80;
+      }
+      if (element) {
+        window.scrollTo({
+          top: temp,
+          behavior: "smooth",
+        });
+      }
+    }, 0);
   };
 
   return (
     <>
       <div
         className={`${styles.gradient} ${showNavbar ? styles.display : ""}`}
-        onClick={handleMenuIconClick}
+        onClick={() => setShowNavbar(false)}
       ></div>
       <div className={styles.banner}>
         <div className={styles.menu_icon}>
