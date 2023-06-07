@@ -49,7 +49,7 @@ const Navbar = () => {
 
       <ul className={`${styles.navbar} ${showNavbar ? styles.show : ""}`}>
         <span className={styles.navbar_content}>
-          JavaScript Documentation
+          JS Documentation
           <div className={styles.close_icon}>
             <CloseIcon
               style={{ fontSize: "2rem" }}
