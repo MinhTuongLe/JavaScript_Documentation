@@ -42,7 +42,7 @@ const Navbar = () => {
       ></div>
       <div className={styles.banner}>
         <div className={styles.menu_icon}>
-          <MenuIcon onClick={handleMenuIconClick} />
+          <MenuIcon onClick={handleMenuIconClick} style={{ fontSize: "3rem" }}/>
         </div>
         <span>JS Documentation</span>
       </div>
@@ -52,7 +52,7 @@ const Navbar = () => {
           JS Documentation
           <div className={styles.close_icon}>
             <CloseIcon
-              style={{ fontSize: "2rem" }}
+              style={{ fontSize: "3rem" }}
               onClick={handleMenuIconClick}
             />
           </div>

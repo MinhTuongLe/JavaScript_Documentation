@@ -27,7 +27,7 @@ function App() {
     <BrowserRouter>
       <Container fluid>
         <Row>
-          <Col xxl={2} xl={3} lg={4} style={{padding:"0"}}>
+          <Col xxl={2} xl={3} lg={3} style={{padding:"0"}}>
             <Navbar/>
           </Col>
           <Col style={{padding:"0"}}>

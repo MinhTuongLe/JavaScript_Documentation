@@ -142,7 +142,7 @@
 
 @media (width < 992px) {
   .navbar {
-    width: 75%;
+    width: 55%;
     transform: translateX(-100%);
     transition: all 0.3s;
     .navbar_content {
@@ -197,7 +197,7 @@
 
 @media (width >= 992px) and (width < 1200px) {
   .navbar {
-    width: 33.3333333333% !important;
+    width: 25% !important;
   }
 }
 
