@@ -22,7 +22,7 @@ const Navbar = () => {
       const element = document.getElementById(navLink);
       const deviceWidth = window.innerWidth;
       let temp = element.offsetTop;
-      if (deviceWidth <= 1023) {
+      if (deviceWidth < 992) {
         temp -= 80;
       }
       if (element) {
