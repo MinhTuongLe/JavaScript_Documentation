@@ -26,7 +26,7 @@
   background-color: #fff;
   z-index: 99999;
   .navbar_content {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.78vw, 1.2rem);
     text-decoration: none;
     background-color: #fff;
     color: #757c7c;
@@ -70,14 +70,14 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 2.96vw, 2rem);
   font-weight: 600;
   padding-top: 48px;
 }
 
 .content {
   margin: 18px 1.2% 32px;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.78vw, 1.2rem);
   color: #525656;
   & p,
   li {
@@ -98,7 +98,7 @@
 
     & code {
       letter-spacing: 1px;
-      font-size: 1rem;
+      font-size: clamp(0.8rem, 1.48vw, 1rem);
       font-weight: 500;
       line-height: 1.6rem;
       font-family: "Courier New", monospace;
@@ -118,7 +118,7 @@
   justify-content: space-between;
   background-color: #fff300;
   padding: 2% 5%;
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 2.67vw,1.8rem);
   font-weight: 700;
   position: fixed;
   width: 100%;
@@ -142,7 +142,7 @@
 
 @media (width < 992px) {
   .navbar {
-    width: 55%;
+    width: 70%;
     transform: translateX(-100%);
     transition: all 0.3s;
     .navbar_content {
